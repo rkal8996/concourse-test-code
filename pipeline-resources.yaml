@@ -11,8 +11,8 @@ jobs:
   plan:
   - get: sample-git-repo-main
   - task: task-01-print-hello-world
-    file: simple-tasks/hello-world-task.yaml
+    file: sample-git-repo-main/simple-tasks/hello-world-task.yaml
   - task: task-02-print-directories
-    file: simple-tasks/print-directories.yaml
+    file: sample-git-repo-main/simple-tasks/print-directories.yaml
   - task: task-03-system-info
-    file: simple-tasks/system-info.yaml
+    file: sample-git-repo-main/simple-tasks/system-info.yaml

@@ -2,7 +2,7 @@ resources:
 - name: sample-git-repo-main
   type: git
   source:
-    uri: https://github.com/rkal8996/concourse-test-code.git\
+    uri: https://github.com/rkal8996/concourse-test-code.git
     branch: main
 
 jobs:

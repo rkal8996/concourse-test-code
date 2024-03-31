@@ -1,0 +1,20 @@
+---
+resources:
+- name: sample-git-repo-main
+  type: git
+  source:
+    uri: https://github.com/rkal8996/concourse-test-code.git
+    branch: main
+  check_every: 1s
+
+jobs:
+  - name: pass-files-job
+    public: true
+    plan:
+      - get: sample-git-repo-main
+      - task: create-some-files
+        file: sample-git-repo-main/simple-tasks/generate-files.yaml
+      - task: read-some-files
+        file: sample-git-repo-main/simple-tasks/show-files.yaml
+
+

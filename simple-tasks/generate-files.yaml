@@ -1,0 +1,15 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: busybox}
+
+inputs:
+  - name: sample-git-repo-main
+
+outputs:
+  - name: generated-files
+
+run:
+  path: sample-git-repo-main/simple-tasks/generate-files.sh

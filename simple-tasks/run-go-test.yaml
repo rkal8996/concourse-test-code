@@ -11,4 +11,4 @@ inputs:
 
 run:
   path: ls
-  args: [sample-git-repo-main/simple-tasks/]
+  args: [-l sample-git-repo-main/simple-tasks/]

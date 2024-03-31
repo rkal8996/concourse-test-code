@@ -1,0 +1,24 @@
+resources:
+- name: sample-git-repo-main
+  type: git
+  source:
+    uri: https://github.com/rkal8996/concourse-test-code.git
+    branch: main
+  check_every: 1s
+- name: go-app-repo-main
+  type: git
+  source:
+    uri: https://github.com/cloudfoundry-community/simple-go-web-app.git
+    branch: master
+  check_every: 1s
+
+
+jobs:
+- name: run-go-tests
+  public: true
+  plan:
+  - get: sample-git-repo-main
+    trigger: true
+  - get: go-app-repo-main
+  - task: task-01-print-hello-world
+    file: sample-git-repo-main/simple-tasks/run-go-test.yaml

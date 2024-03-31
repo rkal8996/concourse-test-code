@@ -23,6 +23,7 @@ jobs:
   plan:
   - get: sample-git-repo-main
     trigger: true
+    passed: [job-execute-task-from-git-file]
   - task: task-02-print-directories
     file: sample-git-repo-main/simple-tasks/print-directories.yaml
 - name: job-execute-task-from-git-get-sys-info
@@ -30,6 +31,7 @@ jobs:
   plan:
   - get: sample-git-repo-main
     trigger: true
+    passed: [job-execute-task-from-git-file-print-dir]
   - get: my-timer
     trigger: true
   - task: task-03-system-info

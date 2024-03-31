@@ -4,6 +4,10 @@ resources:
   source:
     uri: https://github.com/rkal8996/concourse-test-code.git
     branch: main
+- name: my-timer
+  type: time
+  source:
+    interval: 5s
 
 jobs:
 - name: job-execute-task-from-git-file
@@ -24,6 +28,8 @@ jobs:
   public: true
   plan:
   - get: sample-git-repo-main
+    trigger: true
+  - get: my-timer
     trigger: true
   - task: task-03-system-info
     file: sample-git-repo-main/simple-tasks/system-info.yaml

@@ -11,6 +11,7 @@ jobs:
   plan:
   - get: sample-git-repo-main
   - task: task-01-print-hello-world
+    file: sample-git-repo-main/simple-tasks/hello-world-task.yaml
 - name: job-execute-task-from-git-file-print-dir
   public: true
   plan:

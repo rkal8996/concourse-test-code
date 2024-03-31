@@ -4,6 +4,7 @@ resources:
   source:
     uri: https://github.com/rkal8996/concourse-test-code.git
     branch: main
+  check_every: 1s
 - name: my-timer
   type: time
   source:

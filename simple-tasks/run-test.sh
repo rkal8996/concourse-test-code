@@ -1,5 +1,5 @@
 #!/bin/sh
-
+chmod 777 $0
 set -e
 
 # task script is in resource-tutorial/job-inputs/ folder

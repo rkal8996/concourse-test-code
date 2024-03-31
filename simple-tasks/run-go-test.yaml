@@ -10,7 +10,4 @@ inputs:
     path: gopath/src/github.com/cloudfoundry-community/simple-go-web-app
 
 run:
-  path: ls
-  args: 
-    - "-l"
-    - "sample-git-repo-main/simple-tasks/"
+  path: sample-git-repo-main/simple-tasks/run-test.sh

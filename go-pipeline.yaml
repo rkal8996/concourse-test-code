@@ -20,5 +20,5 @@ jobs:
   - get: sample-git-repo-main
     trigger: true
   - get: go-app-repo-main
-  - task: task-01-print-hello-world
+  - task: run-go-test
     file: sample-git-repo-main/simple-tasks/run-go-test.yaml

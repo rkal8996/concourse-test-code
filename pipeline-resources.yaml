@@ -8,7 +8,7 @@ resources:
 - name: my-timer
   type: time
   source:
-    interval: 5s
+    interval: 10h
 
 jobs:
 - name: job-execute-task-from-git-file
